@@ -4,11 +4,10 @@
     <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" rel="stylesheet" />
+    <title>Landing Page Template</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" media="all" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -17,19 +16,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;1,300&family=Prompt:wght@300&display=swap" rel="stylesheet"> 
     <script src="scripts.js"></script>
-    <script language="JavaScript" type="text/javascript" src="slickscripts.js"></script>
-    <script src="bootstrap.js"></script>
+     <script language="JavaScript" type="text/javascript" src="slickscripts.js"></script> <!-- i could use 1 script but just to simpify things for me i have 1 for jquery and 1 for vanilla js -->
 </head>
-<header>
-    <div class="container-fluid section">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+<body>
+<header class="container-fluid section">
+      <div class="row d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
           <a href="/" class="d-flex align-items-center col-md-3 mb-1 mb-md-0 text-dark text-decoration-none">
             <img class="bi me-2" width="80" height="64" role="img" aria-label="Bootstrap" src="logo.jpg">
           </a>
     
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-            <!-- <li><a href="#" class="nav-link px-2 link-dark">Features</a></li> -->
             <li><a href="#about" class="nav-link px-2 link-dark">About</a></li>
             <li><a href="#faq" class="nav-link px-2 link-dark">FAQs</a></li>
             <li><a href="#accessories" class="nav-link px-2 link-dark">Accessories</a></li>
@@ -42,35 +39,33 @@
                 </path>
             </svg>
         </button>
-    
+
           <nav class="col-md-3 text-end float-right show-and-hide-nav collapse" id="bd-docs-nav">
               <div class="side-buttons" id="side-buttons">
             <button type="button" class="btn btn-outline-primary me-2 m-1">Login</button>
             <button type="button" class="btn btn-primary m-1">Sign-up</button>
             <button type="button" class="btn btn-primary m-1" id="search-button" value="Click" onclick="switchVisible();">Search</button>
-        </div>
+            </div>
             <div class="hidden-search py-1" id="search">
                 <button type="button" class="btn btn-outline-secondary" id="back-button" value="Click" onclick="switchVisible();">Back</button>
                 <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
-        </nav>
+          </nav>
     </div>
 </header>
-
-<body>
-    <section id="">
+<main>
+    <section id="home">
         <div class="container-fluid fullscreen-section-1">
           <h1 class="section-h1 fw-normal">Qanba Pearl</h1>
             <button class="main-button">Buy</button>
         </div>
       </section>
       <section id="about">
-        <div class="spacer layer1"></div>
         <div class="container fullscreen-section">
           <div class="row">
             <div class="col mb-auto text-center center-div">
-            <h1 class="section-2-h1 display-4 fw-normal text-white">About Qanba</h1>
-          <p class="fs-5 section-2-p text-white-50">
+            <h1 class="section-2-h1 display-4 fw-normal text-black">About Qanba</h1>
+          <p class="fs-5 section-2-p text-black-50">
             Qanba was founded in 2009 with a mission to create the finest gaming peripherals. 
             Our manufacturing headquarters is located in ShenZhen, China. 
             We design and produce our own arcade stick parts and arcade buttons. 
@@ -82,11 +77,10 @@
         </div>
       </section>
       <section id="faq">
-        <div class="spacer layer2"></div>
         <div class="container-fluid fullscreen-section">
           <h1 class="d-flex justify-content-center display-4 fw-normal">FAQ</h1>
         <div class="row justify-content-center d-flex">
-        <div class="col accordion-flush" id="accordionExample">
+         <div class="col accordion-flush" id="accordionExample"> <!-- used accordion templates on the accordion examples page -->
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -107,7 +101,7 @@
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
               <div class="accordion-body fs-5 text-muted">
-                Each Sony Licensed Qanba product that you purchase directly through us or one of our authorized retailers has a one year warranty from date of purchase. All other products have a warranty of 90 days from date of purchase. Any modification to your fight stick immediately voids the warranty. This includes but is not limited to changing buttons, balltop, and any interior components. By modding your stick you assume all responsibility of possible malfunctions and surrender the option of returning your stick or receiving any additional support.
+                Each Sony Licensed Qanba product that you purchase directly through us or one of our authorized retailers has a one year warranty from date of purchase. All other products have a warranty of 90 days from date of purchase.
               </div>
             </div>
           </div>
@@ -127,7 +121,7 @@
         </div>
       </div>
       </section>
-      <section id="accessories">
+       <section id="accessories"> <!-- used bootstrap template for the cards since the formatting kinda hard to setup ehehe -->
           <div class="container-fluid fullscreen-section">
           <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
             <h1 class="display-4 fw-normal">Accessories</h1>
@@ -187,7 +181,7 @@
           </div>
         </div>
       </section>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
