@@ -2,6 +2,7 @@ $(document).ready(function() {
   $('.accessories').slick({
     dots: true,
     infinite: false,
+    arrows: false,
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -23,7 +24,7 @@ $(document).ready(function() {
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 595,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
